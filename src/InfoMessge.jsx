@@ -5,7 +5,7 @@ export default function InfoMessge({ nameUser, role, srcImg, altImg }) {
   const [importedImage, setImportedImage] = useState(null);
   useEffect(() => {
     (async () => {
-      const image = await import(srcImg);
+      const image = await import(/* @vite-ignore */srcImg);
       setImportedImage(image.default);
     })();
   }, []);
