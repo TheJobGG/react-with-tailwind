@@ -30,13 +30,15 @@ export default function Table() {
   return (
     <table className="mx-auto">
       <thead className=" pl-5 bg-slate-100 border-b-gray-200 border-b-[1px]">
-        <th className="text-left px-2 py-1">Name</th>
-        <th className="text-left px-2 py-1">Title</th>
-        <th className="text-left px-2 py-1">Email</th>
+        <tr>
+          <th className="text-left px-2 py-1">Name</th>
+          <th className="text-left px-2 py-1">Title</th>
+          <th className="text-left px-2 py-1">Email</th>
+        </tr>
       </thead>
       <tbody>
-        {data.map((employee) => (
-          <tr className="odd:bg-white even: bg-slate-100">
+        {data.map((employee, ind) => (
+          <tr key={ind} className="odd:bg-white even: bg-slate-100">
             <td className="pl-2 py-2 px-2">{employee.name}</td>
             <td className="pl-2 py-2 px-2">{employee.title}</td>
             <td className="pl-2 py-2 px-2">{employee.email}</td>

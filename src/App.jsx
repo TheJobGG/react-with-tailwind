@@ -19,8 +19,8 @@ function App() {
       <div className=" mx-5 flex flex-wrap gap-2 py-5 justify-evenly">
         <CardMessage />
 
-        {data.map((employee) => (
-          <InfoMessge
+        {data.map((employee, ind) => (
+          <InfoMessge key={ind}
             role={employee.role}
             nameUser={employee.nameUser}
             srcImg={employee.srcImg}
@@ -28,8 +28,6 @@ function App() {
           />
         ))}
       </div>
-
-      {/* table */}
 
       <div className=" mx-5 flex flex-wrap gap-2 py-5 justify-evenly">
         <Table />
